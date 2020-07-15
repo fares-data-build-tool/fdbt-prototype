@@ -1,0 +1,152 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="passenger-type">Passenger type</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group ticket types</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="group-ticket-range">Number of passengers</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="group-ticket-age-range">Passengers age ranges</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Proof of age</a>
+      </li>
+
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="group-ticket-proof" method="post">
+      <h1 class="govuk-heading-l">Tell us more about proof of age</h1>
+
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+
+
+
+
+
+
+
+{% set child %}
+{{ govukCheckboxes({
+  idPrefix: "proof",
+  name: "proof",
+
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "mcard",
+      text: "Membership card"
+    },
+    {
+      value: "scard",
+      text: "Student card"
+    },
+    {
+      value: "id",
+      text: "Identity document"
+    }
+  ]
+}) }}
+
+{% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "child-range",
+  name: "child-range",
+  fieldset: {
+    legend: {
+      text: "Does the child passenger type require a proof of age document?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "  We need to know if specific passengers need to prove their age"
+  },
+
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: child
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

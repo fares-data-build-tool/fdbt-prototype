@@ -1,0 +1,94 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" >Fare type</a>
+      </li>
+      <!--
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>-->
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="name-group-ticket" method="post">
+
+      {{ govukRadios({
+  idPrefix: "fare",
+  name: "selectfare",
+  fieldset: {
+    legend: {
+      text: "Select a fare type",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Warrington's own buses"
+  },
+  items: [
+    {
+      value: "xxxxx",
+      text: "Single ticket - point to point"
+    },
+    {
+      value: "xxxxx",
+      text: "Group ticket - more than one passenger"
+    },
+    {
+      value: "xxxx",
+      text: "Period ticket (Day, Week, Month and Annual)"
+    },
+    {
+      value: "xxx",
+      text: "Return ticket - single service"
+    },
+    {
+      value: "xxxx",
+      text: "Flat fare ticket - Single journey"
+    }
+  ]
+}) }}
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

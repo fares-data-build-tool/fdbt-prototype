@@ -1,0 +1,221 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="passenger-type">Passenger type</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+      </li>
+
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group ticket types</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="group-ticket-age-range">Number of passengers</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Age ranges</a>
+      </li>
+
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="group-ticket-proof" method="post">
+      <h1 class="govuk-heading-l">Tell us more about the passengers in the group ticket</h1>
+      <span class="govuk-hint" id="">We need to know the age ranges, if you have them</span>
+
+<!--
+      Does the XXXX have a specific number of people?
+      Warrington own busses group ticket details
+
+      Yes
+      How many adults?
+      How many children?
+
+
+      No it has a range
+      Enter minimum number of children
+      Enter maximum number of childres
+
+      Enter minimum number of adults
+      Enter maximum number of adults
+
+-->
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+
+
+{% set adult %}
+{{ govukInput({
+  id: "group-ranges-adult-min",
+  name: "adult",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "Adults minimum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-adult-max",
+  name: "adult1",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+   text: "Adults maximum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{% endset -%}
+
+
+
+
+
+
+
+{% set child %}
+{{ govukInput({
+  id: "group-ranges-child-min",
+  name: "child1",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "Child minimum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-child-max",
+  name: "child2",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+   text: "Child maximum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{% endset -%}
+
+
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "adult-range",
+  name: "adult-range",
+  fieldset: {
+    legend: {
+      text: "Do adult passengers have and age range?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: adult
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+{{ govukRadios({
+  idPrefix: "child-range",
+  name: "child-range",
+  fieldset: {
+    legend: {
+      text: "Do child passengers have and age range?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: child
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

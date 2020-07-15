@@ -1,0 +1,199 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+      </li>
+
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group ticket types</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Number of passengers</a>
+      </li>
+
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="group-ticket-age-range" method="post">
+      <h1 class="govuk-heading-l">Does the group have a specific number of passengers?</h1>
+<!--
+      Does the XXXX have a specific number of people?
+      Warrington own busses group ticket details
+
+      Yes
+      How many adults?
+      How many children?
+
+
+      No it has a range
+      Enter minimum number of children
+      Enter maximum number of childres
+
+      Enter minimum number of adults
+      Enter maximum number of adults
+
+-->
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set number %}
+{{ govukInput({
+  id: "group-pages-adult",
+  name: "adult",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "How many adults?"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-pages-child",
+  name: "child",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "How many children?"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{% endset -%}
+
+
+
+
+
+
+
+{% set range %}
+{{ govukInput({
+  id: "group-ranges-adult-min",
+  name: "adult",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "Adults minimum"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-adult-max",
+  name: "child",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+   text: "Adults maximum"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-child-min",
+  name: "adult",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "Children minimum"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-child-max",
+  name: "child",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+   text: "Children maximum"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{% endset -%}
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "how-contacted-conditional",
+  name: "how-contacted",
+
+  hint: {
+    text: "Enter Warrington own busses group ticket passenger details"
+  },
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes it is fixed",
+      conditional: {
+        html: number
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No it can have a range of passengers",
+      conditional: {
+        html: range
+      }
+    }
+  ]
+}) }}
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
