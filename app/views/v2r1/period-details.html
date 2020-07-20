@@ -1,0 +1,243 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group ticket types</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-range">Number of passengers</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-age-range">Age ranges</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-proof">Proof of age</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type2">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-type">Period ticket</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-services">Services</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-amount">Amount</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Name / Price</a>
+    </li>
+
+
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Enter your product details</h1>
+    <span class="govuk-hint" id="">Warrington's Own Buses - Multiple Services - Adult and Child</span>
+
+
+  {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  text: "For example, Super Saver ticket - £4.95 - 2"
+}) }}
+  </div>
+</div>
+
+
+    <form class="form" action="period-expire" method="post">
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product name"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "Enter the name of your product"
+      },
+      id: "xxxx",
+      name: "period-name1",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product price"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "For example, £2.99"
+      },
+      id: "xxxx",
+      name: "period-price1",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product Duration"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "Enter a number of days"
+      },
+      id: "xxxx",
+      name: "period-duration1",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product name"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "Enter the name of your product"
+      },
+      id: "xxxx",
+      name: "period-name2",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product price"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "For example, £2.99"
+      },
+      id: "xxxx",
+      name: "period-price2",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+    {{ govukInput({
+      label: {
+        text: "Product Duration"
+      },
+      classes: "govuk-input--width-full",
+      hint: {
+        text: "Enter a number of days"
+      },
+      id: "xxxx",
+      name: "period-duration2",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </div>
+</div>
+
+</form>
+
+{% endblock %}

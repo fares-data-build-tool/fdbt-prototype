@@ -1,0 +1,173 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group ticket types</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-range">Number of passengers</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-age-range">Age ranges</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-proof">Proof of age</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type2">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-type">Period ticket</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-services">Services</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-amount">Amount</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-details">Name / Price</a>
+    </li>
+
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Expiry</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+    <form class="form" action="period-feedback" method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">When does the product expire?</h1>
+
+
+      <span class="govuk-hint" id="">Warrington's own buses -   {{ data['period-name1'] }} -   {{ data['period-price1'] }}</span>
+
+      <p class="govuk-hint" id="">
+        We need to know the time that this product would be valid until.
+Calendar day means a ticket purchased at 3pm would be valid until midnight on its day of expiry
+24hr means a ticket purchased at 3pm will be valid until 3pm on its day of expiry<br />
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Your specified product(s)</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Product name</th>
+            <th scope="col" class="govuk-table__header">Product price</th>
+            <th scope="col" class="govuk-table__header">Product duration</th>
+            <th scope="col" class="govuk-table__header">24hr</th>
+            <th scope="col" class="govuk-table__header">Calender day</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['period-name1'] }}</td>
+            <td class="govuk-table__cell">{{ data['period-price1'] }}</td>
+            <td class="govuk-table__cell">{{ data['period-duration1'] }}</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                </label>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                </label>
+              </div>
+            </td>
+
+          </tr>
+
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['period-name1'] }}</td>
+              <td class="govuk-table__cell">{{ data['period-price1'] }}</td>
+              <td class="govuk-table__cell">{{ data['period-duration1'] }}</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name1" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                  </label>
+                </div>
+              </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name1" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  </label>
+                </div>
+              </td>
+
+            </tr>
+
+
+          </fieldset>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </div>
+  </div>
+
+    </form>
+
+
+{% endblock %}
