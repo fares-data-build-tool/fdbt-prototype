@@ -43,8 +43,12 @@
       <a class="govuk-breadcrumbs__link" href="age-proof-child">Child information</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link">Period ticket</a>
+      <a class="govuk-breadcrumbs__link" href="age-proof-child">Restrictions time</a>
     </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Time restrictions</a>
+    </li>
+
   </ol>
 </div>
 {% endblock %}
@@ -56,33 +60,8 @@
 
 
 
-    <form class="form" action="period-services" method="post">
+    <form class="form" action="xxxxx" method="post">
 
-      {{ govukRadios({
-  idPrefix: "fare",
-  name: "selectfare",
-  fieldset: {
-    legend: {
-      text: "Select a type of period ticket",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "xxxxx",
-      text: "A ticket within a geographical zone"
-    },
-    {
-      value: "xxxx",
-      text: "A ticket for some or all of your network of services"
-    }
-  ]
-}) }}
-
-{{ govukInsetText({
-  text: "A ticket for services across multiple operators will be availble soon"
-}) }}
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 
