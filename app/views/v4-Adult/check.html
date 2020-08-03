@@ -1,0 +1,414 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/fare-type">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link"  href="../v3r1/passenger-type">Passenger type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/how-many">How many</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/type-of-passengers">Passengers in group</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/age-proof-adult">Adult information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/age-proof-child">Child information</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/period-type">Period ticket</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/period-services">Services</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/period-amount">Amount</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/period-details">Name / Price</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v3r1/period-expire">Expiry</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Summary</a>
+    </li>
+  </ol>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before submitting your fare</h1>
+
+
+
+
+
+
+
+
+        <h2 class="govuk-heading-m">Group ticket information</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <!--
+          Select a fare type
+          Select a passenger type
+          How many passengers can use this ticket at one time?
+          What types of passengers are in the group?
+          Tell us more about the adult passengers
+          Tell us more about the child passengers
+
+          -->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Select a fare type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Period ticket
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Select a passenger type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Group
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How many passengers can use this ticket at one time?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Minimum 1<br />
+              Maximum 2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What types of passengers are in the group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Adults 2 <br />
+              Children 1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How many adults can be in the group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Minimum 1 <br />
+              Maximum 2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do adult passengers have an age range?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Minimum - 18 <br />
+              Maximum - 60
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How many children can be in the group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Minimum - 1 <br />
+              Maximum - 3
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do child passengers have and age range?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Minimum - 4 <br />
+              Maximum - 16
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do child passengers require a proof of age document?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes <br />
+              Membership card<br />
+              Student card<br />
+              Identity document<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Are their time restrictions on this ticket?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Is their a start time or an end time to this ticket?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes<br />
+              Start - 0900<br />
+              End - 2300<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Is this ticket only valid on certain days?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes - Friday, Saturday, Sunday<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+
+        </dl>
+
+
+
+
+
+
+
+
+
+        <h2 class="govuk-heading-m">Period ticket information</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <!--
+          Select a type of period ticket
+          Which service(s) is the ticket valid for?
+          How many period tickets do you have for the selected services?
+          Enter your product details
+          When does the product expire?
+          -->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Select a type of period ticket
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A ticket for some or all of your network of services
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which service(s) is the ticket valid for? Select all services that apply
+            </dt>
+            <dd class="govuk-summary-list__value">
+              787 - Muncaster - Windlehurst<br />
+              743 - Eccleston - Hydes Brow<br />
+              3D - Palace Fields - Runcorn<br />
+              709 - Rainhill Stoops - West Park<br />
+              751 - Eccleston - Rainhill<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            How many period tickets do you have for the selected services?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Enter your product details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Runner 1 - £2 - 5 Days<br />
+              Runner 2 - £2 - 10 Days<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            When does the product expire?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Runner 1 - 24hr<br />
+              Runner 2 - Calender day<br />
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> previous application number</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+
+        </dl>
+
+
+
+
+
+        <h2 class="govuk-heading-m">Now send your information</h2>
+
+        <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+        <form action="complete" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+        Submit fare data
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
