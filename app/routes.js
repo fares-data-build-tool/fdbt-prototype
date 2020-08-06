@@ -26,7 +26,7 @@ router.post('/v4r1/time-restrict', function (req, res) {
 
 
 // Have you had a school experience before
-router.post('/v4-Adult/time-restrict', function (req, res) {
+router.post('/v4-Adult/time-restrict1', function (req, res) {
 
     let decide1 = req.session.data['decide-yn']
 
