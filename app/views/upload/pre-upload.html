@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">You are about to upload your fares data triangle as a CSV.
+</h1>
+<p class="govuk-hint">Lets check you have everything ready.</p>
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "1",
+      name: "1",
+      fieldset: {
+        legend: {
+          text: "Firstly, do you know what a fares date triangle is?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+
+      items: [
+        {
+          value: "yes",
+          text: "Yes - I know what a fares data triangle is"
+
+        },
+        {
+          value: "govuk-verify",
+          text: "No – I do not know and need help"
+        }
+      ]
+    }) }}
+
+
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "2",
+      name: "2",
+      fieldset: {
+        legend: {
+          text: "Secondly, have you prepared your fares data triangle as a CSV?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+
+      items: [
+        {
+          value: "yes",
+          text: "Yes – I have prepared my file as a CSV"
+
+        },
+        {
+          value: "govuk-verify",
+          text: "No – I am unsure how to do this"
+        }
+      ]
+    }) }}
+
+
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "3",
+          name: "3",
+          fieldset: {
+            legend: {
+              text: "Thirdly, Has your fares data triangle been prepared in the right way?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes - I have read the help files and have upload one before"
+
+            },
+            {
+              value: "govuk-verify",
+              text: "No - I am unsure, I would like to read the help and guidance files"
+            }
+          ]
+        }) }}
+
+        <p>
+          And finally if you have answered yes to all the above and have uploaded a file successfully before, tick this box, and these questions will be removed next time.
+          </p>
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+          {{ govukCheckboxes({
+            idPrefix: "organisation",
+            name: "organisation",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+              legend: {
+                text: "Do you want to see this page again?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--s"
+              }
+            },
+            items: [
+              {
+                value: "dontshow",
+                text: "I do not need any further instruction"
+              }
+
+            ]
+          }) }}
+
+    <form class="form" action="instruct" method="get">
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}
