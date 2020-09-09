@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">How long can passengers use the ticket(s) for?
+</h1>
+
+<p class="govuk-hint">Enter an amount, then select days, weeks, months or years.</p>
+
+<div class="govuk-form-group align-two">
+  <label class="govuk-label" for="width-3">
+    Amount
+  </label>
+  <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+
+
+
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Duration
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>Days</option>
+    <option value="updated" >Weeks</option>
+    <option value="views">Months</option>
+    <option value="comments">Years</option>
+  </select>
+</div>
+
+
+
+
+
+      <form class="form" action="type-of-passengers" method="get">
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}
