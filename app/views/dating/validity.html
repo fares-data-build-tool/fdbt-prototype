@@ -27,6 +27,15 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+
+
+
+
+
+
+
+
+<!--
     <h1 class="govuk-heading-l">How long can passengers use the ticket(s) for?
 </h1>
 
@@ -67,7 +76,95 @@
 
   </div>
 </div>
+-->
 
+
+
+    <form class="form" action="group-ticket-age-range" method="post">
+      <h1 class="govuk-heading-l">Can passengers use this ticket indefinately?</h1>
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set date %}
+{{ govukInput({
+  label: {
+    text: "Amount"
+  },
+  classes: "govuk-input--width-3",
+  id: "width-3",
+  name: "Amount"
+}) }}
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Duration"
+  },
+  items: [
+    {
+      value: "1",
+      text: "Day(s)"
+    },
+    {
+      value: "2",
+      text: "Week(s)",
+      selected: true
+    },
+    {
+      value: "3",
+      text: "Month(s)"
+    },
+    {
+      value: "4",
+      text: "Year(s)"
+    }
+  ]
+}) }}
+{% endset -%}
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "how-contacted-conditional",
+  name: "how-contacted",
+
+  hint: {
+    text: "Select yes if your return ticket is valid indefinitely"
+  },
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: number
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No it expires after a period of time",
+      conditional: {
+        html: date
+      }
+    }
+  ]
+}) }}
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
 
 
 
