@@ -81,7 +81,7 @@
 
 
     <form class="form" action="group-ticket-age-range" method="post">
-      <h1 class="govuk-heading-l">Can passengers use this ticket indefinately?</h1>
+      <h1 class="govuk-heading-l">Is this ticket valid for more than one day?</h1>
 
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -136,23 +136,25 @@
   name: "how-contacted",
 
   hint: {
-    text: "Select yes if your return ticket is valid indefinitely"
+    text: "Select no if this ticket is only valid on day of travel "
   },
   items: [
+  {
+    value: "xxx ",
+    text: "Yes",
+    conditional: {
+      html: date
+    }
+  },
     {
       value: "XXXX",
-      text: "Yes",
+      text: "No",
       conditional: {
-        html: number
-      }
-    },
-    {
-      value: "xxx ",
-      text: "No it expires after a period of time",
-      conditional: {
-        html: date
+        html: xxx
       }
     }
+
+
   ]
 }) }}
 
