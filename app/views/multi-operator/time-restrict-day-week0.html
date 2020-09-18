@@ -1,0 +1,262 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link"  href="passenger-type">Passenger type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="how-many">How many</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="type-of-passengers">Passengers in group</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="age-proof-adult">Adult information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="age-proof-child">Child information</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Time restrictions</a>
+    </li>
+
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="period-type" method="post">
+
+      <h1 class="govuk-heading-l">Tell us more about the time restrictions</h1>
+      <p class="govuk-hint">
+        The following two questions will provide us with all the information we need for time restrictions
+        </p>
+
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% set time %}
+
+        {{ govukInput({
+          id: "restrict-start",
+          name: "restrict-start",
+          inputmode: "numeric",
+          classes: "govuk-input--width-2",
+          label: {
+            text: "Start time"
+          },
+          hint: {
+            text: "Enter time in 24 hour format for example 0900 or 2300"
+          },
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+        {{ govukInput({
+          id: "restrict-end",
+          name: "restrict-end",
+          inputmode: "numeric",
+          classes: "govuk-input--width-2",
+          label: {
+           text: "End time"
+          },
+          hint: {
+            text: "If applicable"
+          },
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+          {% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {% set days %}
+
+          {{ govukCheckboxes({
+            idPrefix: "xxxx",
+            name: "xxxxx",
+
+
+            hint: {
+              text: "Select the days of the week the ticket is valid for."
+            },
+            items: [
+
+              {
+                value: "xxx",
+                text: "Monday"
+              },
+              {
+                value: "xxx",
+                text: "Tuesday"
+              },
+              {
+                value: "xxx",
+                text: "Wednesday"
+              },
+              {
+                value: "xxx",
+                text: "Thursday"
+              },
+
+              {
+                value: "xxx",
+                text: "Friday"
+              },
+              {
+                value: "xxx",
+                text: "Saturday"
+              },
+              {
+                value: "xxx",
+                text: "Sunday"
+              }
+            ]
+          }) }}
+
+
+
+          {% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "restrict-time",
+          name: "restrict-time",
+          fieldset: {
+            legend: {
+              text: "Is their a start time or an end time to this ticket?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: time
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              conditional: {
+                html: phoneHtml
+              }
+            }
+          ]
+        }) }}
+
+
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "restrict-days",
+          name: "restrict-days",
+          fieldset: {
+            legend: {
+              text: "Is this ticket only valid on certain days?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes, let me select the days",
+              conditional: {
+                html: days
+              }
+            },
+            {
+              value: "no",
+              text: "No, its valid all week",
+              conditional: {
+                html: phoneHtml
+              }
+            }
+          ]
+        }) }}
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

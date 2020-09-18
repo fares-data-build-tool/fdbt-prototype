@@ -1,0 +1,106 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+         <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset" aria-describedby="csv-upload-hint csv-upload-error">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">Select a file to upload</h1>
+               </legend>
+               <span class="govuk-hint" id="csv-upload-hint">Upload a fare zone as a CSV file below. Refer to the documents section to download a help file and a fares triangle template.</span>
+               <div class="govuk-form-group input-form">
+                  <label class="govuk-label" for="csv-upload">Upload a CSV file</label>
+                  <div class=""><input type="file" class="govuk-file-upload" id="csv-upload" name="csv-upload" accept=".csv"></div>
+               </div>
+            </fieldset>
+         </div>
+
+
+<div class="govuk-inset-text">
+
+<p class="govuk-body">Some common issues with CSV uploads include:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Commas in fare stage names</li>
+  <li>Not providing a price in every cell</li>
+  <li>Not filling in every fare stage on the diagonal row</li>
+  <p class="govuk-body">Use the help file for a more detailed guide on constructing a fares triangle in the required format or download the CSV template to create a new file.</p>
+</div>
+
+
+    <form class="form" action="search-operator" method="post">
+      <button class="govuk-button" data-module="govuk-button">Upload and continue</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </form>
+   </div>
+   <div class="govuk-grid-column-one-third">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+         <h1 class="govuk-heading-m">Help documents</h1>
+      </legend>
+      <section class="file-attachment">
+         <div class="file-attachment-thumbnail">
+           <a aria-hidden="true" href="/_next/static/files/How-to-Upload-a-Fares-Triangle-173d318a.pdf" download="">
+            <img style="-webkit-user-select: none;margin: auto;" src="https://tfn-preprod.infinityworks.com/_next/static/images/Guidance-doc-front-page-589aa8312115a5d6fff933eb8e7ee1d4.png"></a></div>
+         <div>
+            <a href="/_next/static/files/How-to-Upload-a-Fares-Triangle-173d318a.pdf" class="govuk-link govuk-!-font-size-19" download="">Download Help File</a>
+
+            <p class="file-attachment-metadata govuk-!-font-size-10">
+
+                  PDF<!-- -->, <!-- -->600KB
+
+            </p>
+         </div>
+      </section>
+      <section class="file-attachment">
+         <div class="file-attachment-thumbnail"><a aria-hidden="true" href="/_next/static/files/Fares-Triangle-Example-b5700aab.csv" download=""><img alt="" src="data:image/png;base64,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"></a></div>
+         <div>
+            <a href="/_next/static/files/Fares-Triangle-Example-b5700aab.csv" class="govuk-link govuk-!-font-size-19" download="">Download fare zone CSV template</a>
+            <p class="file-attachment-metadata govuk-!-font-size-10">
+
+                  CSV<!-- -->, <!-- -->400B
+
+            </p>
+         </div>
+      </section>
+   </div>
+</div>
+
+
+{% endblock %}

@@ -45,11 +45,44 @@ router.post('/v4-Adult/time-restrict1', function (req, res) {
 
 
 
+// Have you had a school experience before
+router.post('/multi-operator/time-restrict2', function (req, res) {
+
+    let decide2 = req.session.data['decide-yn']
+
+    console.log(req.session.data['decide-yn'])
+
+    //Option 1
+    if (decide2 === 'yes') {
+        res.redirect('/multi-operator/time-restrict-day-week')
+    }
+    //Option 2
+    else if (decide2 === 'no') {
+        res.redirect('/multi-operator/period-type')
+    }
+    //end
+})
 
 
 
 
+// type of period ticket
+router.post('/multi-operator/period-type', function (req, res) {
 
+    let reroute = req.session.data['multi']
+
+    console.log(req.session.data['multi'])
+
+    //Option 1
+    if (reroute === 'upload') {
+        res.redirect('/multi-operator/upload')
+    }
+    //Option 2
+    else if (reroute === 'specifiy') {
+        res.redirect('/multi-operator/search-operator')
+    }
+    //end
+})
 
 
 

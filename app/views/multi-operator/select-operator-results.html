@@ -1,0 +1,301 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link"  href="passenger-type">Passenger type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="how-many">How many</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="type-of-passengers">Passengers in group</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="age-proof-adult">Adult information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="age-proof-child">Child information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="time-restrict-days">Time restrictions</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Period ticket</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Search for the operators that the ticket can cover</h1>
+
+
+        <form class="form" action="xx" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="two-thirds">
+          Operator name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+
+        <button class="govuk-button" data-module="govuk-button">
+          Search
+        </button>
+      </div>
+
+</form>
+<p class="govuk-body-l">
+  Your search for '<b>Stagecoach</b>' returned <b>53 results</b>
+  </p>
+  <span class="govuk-hint" id="">Select the operators that the ticket covers and click continue</span>
+
+
+
+<div class="pagination">
+  <div class="pages">
+    <a class="govuk-link">1</a>
+    <a href="#" class="govuk-link">2</a>
+    <a href="#" class="govuk-link">3</a>
+    <a href="#" class="govuk-link">4</a>
+    <a href="#" class="govuk-link">5</a>
+    <a href="#" class="govuk-link">Next</a>
+  </div>
+  <div class="results">
+    <p>
+      <b>Displaying 1 -10</b>
+      </p>
+  </div>
+</div>
+
+
+
+
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Name</th>
+      <th scope="col" class="govuk-table__header">NOC</th>
+      <th scope="col" class="govuk-table__header">Select</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - West Yorkshire</th>
+      <td class="govuk-table__cell">SCWY</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small small-checkbox-fix">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - South Yorkshire</th>
+      <td class="govuk-table__cell">SCSY</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - North Yorkshire</th>
+      <td class="govuk-table__cell">SCNY</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - East Yorkshire</th>
+      <td class="govuk-table__cell">SCWY</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Lancashire</th>
+      <td class="govuk-table__cell">SCLC</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Cheshire</th>
+      <td class="govuk-table__cell">SCCH</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Derbyshire</th>
+      <td class="govuk-table__cell">SCDE</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Cumbria</th>
+      <td class="govuk-table__cell">SCCU</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Stafford</th>
+      <td class="govuk-table__cell">SCST</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stagecoach - Barnsley</th>
+      <td class="govuk-table__cell">SCBA</td>
+      <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    &nbsp;
+                  </label>
+                </div>
+              </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<div class="pagination">
+  <div class="pages">
+    <a class="govuk-link">1</a>
+    <a href="#" class="govuk-link">2</a>
+    <a href="#" class="govuk-link">3</a>
+    <a href="#" class="govuk-link">4</a>
+    <a href="#" class="govuk-link">5</a>
+    <a href="#" class="govuk-link">Next</a>
+  </div>
+
+</div>
+
+
+<form class="form" action="choose-services" method="post">
+
+
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+</form>
+
+
+
+  </div>
+</div>
+<!--
+
+
+
+  -->
+
+
+{% endblock %}

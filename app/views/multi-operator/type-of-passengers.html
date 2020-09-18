@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link"  href="passenger-type">Passenger type</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="how-many">How many</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Passengers in group</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="age-proof-adult" method="post">
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    {{ govukCheckboxes({
+      idPrefix: "waste",
+      name: "waste",
+      fieldset: {
+        legend: {
+          text: "What types of passengers are in the group?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+
+      hint: {
+        text: "Only two types of passengers can be added to the group"
+      },
+      items: [
+        {
+          value: "xxx",
+          text: "Adults"
+        },
+        {
+          value: "xxx",
+          text: "Children"
+        },
+        {
+          value: "xxx",
+          text: "Infants"
+        },
+        {
+          value: "xxx",
+          text: "Seniors"
+        },
+        {
+          value: "xxx",
+          text: "Students"
+        },
+
+          {
+            value: "xxx",
+            text: "Anyone"
+          }
+      ]
+    }) }}
+
+    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+    {{ govukInsetText({
+      text: "More passenger types will become available soon"
+    }) }}
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

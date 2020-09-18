@@ -1,0 +1,152 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="start">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type">Fare type</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="name-group-ticket">Group passsenger type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-range">Number of passengers</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-age-range">Age ranges</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="group-ticket-proof">Proof of age</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="fare-type2">Fare type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="period-type">Period ticket</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Services</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="period-amount" method="post">
+    <!--  Which service(s) is the ticket valid for?
+      Select all services that apply
+
+This data is taken from the Traveline National Dataset.-->
+
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Which service(s) on Stagecoach - Lancashire is the ticket valid for?
+    </h1>
+  </legend>
+  <span id="waste-hint" class="govuk-hint">
+     Select all services that apply.
+   </span>
+</fieldset>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+
+  text: "Select all",
+  classes: "govuk-button--secondary"
+}) }}
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+
+
+  hint: {
+    text: "This data is taken from the Traveline National Dataset."
+  },
+
+  items: [
+  {
+    value: "xxxxx",
+    text: "357 - Muncaster - Windlehurst (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "745 - Eccleston - Hydes Brow (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "33 - Palace Fields - Runcorn (Start Date 02/02/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "333 - Rainhill Stoops - West Park (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "3161 - Eccleston - Rainhill (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "317 - Eccleston - Sutton Manor (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "6 - Warrington - Latchford/Westy (Circ) (Start Date 06/07/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "222 - Gains/Latchford (Circ) - Warrington (Start Date 06/07/2020)"
+  }
+
+
+  ]
+}) }}
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+    <p>
+            <a href="search-operator1" class="govuk-link">I would like to add another operator</a>
+    </p>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
