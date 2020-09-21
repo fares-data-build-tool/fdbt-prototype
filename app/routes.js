@@ -79,7 +79,7 @@ router.post('/multi-operator/period-type', function (req, res) {
     }
     //Option 2
     else if (reroute === 'specifiy') {
-        res.redirect('/multi-operator/search-operator')
+        res.redirect('/multi-operator/choose-services-own')
     }
     //end
 })
