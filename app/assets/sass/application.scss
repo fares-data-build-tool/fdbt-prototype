@@ -50,3 +50,12 @@ $govuk-assets-path: '/govuk/assets/';
 
   }
 }
+.float-right{
+  text-align: right;
+  clear: both;
+}
+.float-right:after {
+content: "";
+display: table;
+clear: both;
+}

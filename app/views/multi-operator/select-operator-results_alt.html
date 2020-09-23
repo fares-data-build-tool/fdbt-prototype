@@ -73,7 +73,7 @@
     <h1 class="govuk-heading-l">Search for the operators that the ticket covers</h1>
 
 
-        <form class="form" action="select-operator-results" method="post">
+        <form class="form" action="select-operator-results_alt1" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="two-thirds">
           Operator name
@@ -87,12 +87,14 @@
 
 </form>
 <p class="govuk-body-l">
-  Your search for '<b>Stagecoach</b>' returned <b>53 results</b>
+  Your search for '<b>Stagecoach</b>' returned <b>9 results</b>
   </p>
-  <span class="govuk-hint" id="">Select the operators that the ticket covers from the results</span>
 
 
+    <span class="govuk-hint" id="">Select the operators results and click add operator(s). This data is taken from the Traveline National Dataset.</span>
 
+
+<!--
 <div class="pagination">
   <div class="pages">
     <a class="govuk-link">1</a>
@@ -108,17 +110,74 @@
       </p>
   </div>
 </div>
+-->
+
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+
+
+  items: [
+  {
+    value: "xxxxx",
+    text: "Stagecoach - South Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - West Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - North Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - East Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Lancashire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Cheshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Derbyshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Cumbria"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Stafford"
+  }
+
+  ]
+}) }}
+<P>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+
+    text: "  Add operator(s)",
+    classes: "govuk-button--secondary"
+  }) }}
+  </P>
 
 
 
-
-
+<!--
 
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Name</th>
-      <th scope="col" class="govuk-table__header">NOC</th>
       <th scope="col" class="govuk-table__header">Select</th>
     </tr>
   </thead>
@@ -127,7 +186,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - West Yorkshire</th>
-      <td class="govuk-table__cell">SCWY</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small small-checkbox-fix">
                 <div class="govuk-checkboxes__item">
@@ -142,7 +200,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - South Yorkshire</th>
-      <td class="govuk-table__cell">SCSY</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -157,7 +214,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - North Yorkshire</th>
-      <td class="govuk-table__cell">SCNY</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -172,7 +228,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - East Yorkshire</th>
-      <td class="govuk-table__cell">SCWY</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -187,7 +242,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Lancashire</th>
-      <td class="govuk-table__cell">SCLC</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -203,7 +257,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Cheshire</th>
-      <td class="govuk-table__cell">SCCH</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -218,7 +271,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Derbyshire</th>
-      <td class="govuk-table__cell">SCDE</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -233,7 +285,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Cumbria</th>
-      <td class="govuk-table__cell">SCCU</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -248,7 +299,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Stafford</th>
-      <td class="govuk-table__cell">SCST</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -263,7 +313,6 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Stagecoach - Barnsley</th>
-      <td class="govuk-table__cell">SCBA</td>
       <td class="govuk-table__cell">
               <div class="govuk-checkboxes govuk-checkboxes--small">
                 <div class="govuk-checkboxes__item">
@@ -280,6 +329,22 @@
 </table>
 
 
+
+<div class="float-right">
+
+  <form class="form" action="select-operator-results1_alt" method="post">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add operator(s)
+  </button>
+  </form>
+
+  </div>
+
+-->
+
+
+
+<!--
 <div class="pagination">
   <div class="pages">
     <a class="govuk-link">1</a>
@@ -291,9 +356,15 @@
   </div>
 
 </div>
+-->
 
 
-<form class="form" action="select-operator-results1" method="post">
+
+
+
+
+
+<form class="form" action="period-amount" method="post">
 
 
 

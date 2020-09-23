@@ -50,7 +50,7 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="period-type">Period ticket</a>
     </li>
-
+<!--
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="upload">Upload</a>
     </li>
@@ -61,7 +61,7 @@
 
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="select-operator-results" >Results</a>
-    </li>
+    </li>-->
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link">Your services</a>
     </li>
@@ -91,17 +91,11 @@ This data is taken from the Traveline National Dataset.-->
     </h1>
   </legend>
   <span id="waste-hint" class="govuk-hint">
-     Select all services that apply.
+     Select all services that apply. This data is taken from the Traveline National Dataset.
    </span>
 </fieldset>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-
-  text: "Select all",
-  classes: "govuk-button--secondary"
-}) }}
 
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -110,46 +104,54 @@ This data is taken from the Traveline National Dataset.-->
   name: "waste",
 
 
-  hint: {
-    text: "This data is taken from the Traveline National Dataset."
-  },
+
 
   items: [
   {
     value: "xxxxx",
-    text: "787 - Muncaster - Windlehurst (Start Date 02/03/2020)"
+    text: "787 - Todmorden - West Yorkshire (Start Date 02/03/2020)"
   },
   {
     value: "xxxxx",
-    text: "743 - Eccleston - Hydes Brow (Start Date 02/03/2020)"
+    text: "743 - Mytholmroyd - West Yorkshire  (Start Date 02/03/2020)"
   },
   {
     value: "xxxxx",
-    text: "3D - Palace Fields - Runcorn (Start Date 02/02/2020)"
+    text: "3D - Luddendenfoot - West Yorkshire  (Start Date 02/02/2020)"
   },
   {
     value: "xxxxx",
-    text: "709 - Rainhill Stoops - West Park (Start Date 02/03/2020)"
+    text: "709 - Sowerby Bridge - West Yorkshire  (Start Date 02/03/2020)"
   },
   {
     value: "xxxxx",
-    text: "751 - Eccleston - Rainhill (Start Date 02/03/2020)"
+    text: "751 - Ripponden - West Yorkshire  (Start Date 02/03/2020)"
   },
   {
     value: "xxxxx",
-    text: "754 - Eccleston - Sutton Manor (Start Date 02/03/2020)"
+    text: "754 - Elland - West Yorkshire  (Start Date 02/03/2020)"
   },
   {
     value: "xxxxx",
-    text: "1 - Warrington - Latchford/Westy (Circ) (Start Date 06/07/2020)"
+    text: "1 - West Vale - West Yorkshire  (Circ) (Start Date 06/07/2020)"
   },
   {
     value: "xxxxx",
-    text: "12 - Gains/Latchford (Circ) - Warrington (Start Date 06/07/2020)"
+    text: "12 - Hebden Bridge (Circ) - West Yorkshire  (Start Date 06/07/2020)"
   }
 
   ]
 }) }}
+<P>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+
+    text: "Select all",
+    classes: "govuk-button--secondary"
+  }) }}
+  </P>
+
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 

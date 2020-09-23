@@ -70,10 +70,39 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Search for the operators that the ticket covers</h1>
 
 
-        <form class="form" action="select-operator-results" method="post">
+    <h3 class="govuk-heading-l">Here's what you added  </h3>
+
+              <div class="govuk-inset-text">
+
+                <ul class="govuk-list">
+                  <li>
+                    Stagecoach - West Yorkshire <a class="govuk-link" href="#">remove</a>
+                  </li>
+                  <li>
+                    Stagecoach - Lanacashire <a class="govuk-link" href="#">remove</a>
+                  </li>
+                  <li>
+                    Stagecoach - South Yorkshire <a class="govuk-link" href="#">remove</a>
+                  </li>
+                </ul>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+    <h1 class="govuk-heading-m">You can add more operators here</h1>
+
+
+        <form class="form" action="select-operator-results_alt1" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="two-thirds">
           Operator name
@@ -86,13 +115,17 @@
       </div>
 
 </form>
-<p class="govuk-body-l">
+<!--<p class="govuk-body-l">
   Your search for '<b>Stagecoach</b>' returned <b>53 results</b>
-  </p>
-  <span class="govuk-hint" id="">Select the operators that the ticket covers from the results</span>
+  </p>-->
 
 
 
+
+  <span class="govuk-hint" id="">Select the operators results and click add operator(s). This data is taken from the Traveline National Dataset.</span>
+
+
+<!--
 <div class="pagination">
   <div class="pages">
     <a class="govuk-link">1</a>
@@ -280,6 +313,22 @@
 </table>
 
 
+
+<div class="float-right">
+
+  <form class="form" action="select-operator-results1_alt" method="post">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add operator(s)
+  </button>
+  </form>
+
+  </div>
+
+
+
+
+
+
 <div class="pagination">
   <div class="pages">
     <a class="govuk-link">1</a>
@@ -291,9 +340,78 @@
   </div>
 
 </div>
+-->
 
 
-<form class="form" action="select-operator-results1" method="post">
+
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+
+
+
+
+  items: [
+
+  {
+    value: "xxxxx",
+    text: "Stagecoach - South Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - West Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - North Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - East Yorkshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Lancashire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Cheshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Derbyshire"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Cumbria"
+  },
+  {
+    value: "xxxxx",
+    text: "Stagecoach - Stafford"
+  }
+
+  ]
+}) }}
+<P>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+
+    text: "  Add operator(s)",
+    classes: "govuk-button--secondary"
+  }) }}
+  </P>
+
+
+
+
+
+
+
+<form class="form" action="period-amount" method="post">
 
 
 
