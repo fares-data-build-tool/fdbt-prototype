@@ -95,13 +95,6 @@ This data is taken from the Traveline National Dataset.-->
    </span>
 </fieldset>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-
-  text: "Select all",
-  classes: "govuk-button--secondary"
-}) }}
 
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -151,13 +144,22 @@ This data is taken from the Traveline National Dataset.-->
   ]
 }) }}
 
+
+<P>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+
+    text: "Select all",
+    classes: "govuk-button--secondary"
+  }) }}
+
+  </P>
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 
     </form>
 
-    <p>
-            <a href="search-operator1" class="govuk-link">I would like to add another operator</a>
-    </p>
+  
 
   </div>
 </div>
