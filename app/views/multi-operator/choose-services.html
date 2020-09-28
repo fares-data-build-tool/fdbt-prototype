@@ -76,7 +76,7 @@
 
 
 
-    <form class="form" action="choose-services1" method="post">
+
     <!--  Which service(s) is the ticket valid for?
       Select all services that apply
 
@@ -88,10 +88,11 @@ This data is taken from the Traveline National Dataset.-->
     <h1 class="govuk-fieldset__heading">
       Which service(s) on Stagecoach - West Yorkshire is the ticket valid for?
 
+
     </h1>
   </legend>
   <span id="waste-hint" class="govuk-hint">
-     Select all services that apply.
+     Select all services that apply.   This data is taken from the Traveline National Dataset.
    </span>
 </fieldset>
 
@@ -103,9 +104,6 @@ This data is taken from the Traveline National Dataset.-->
   name: "waste",
 
 
-  hint: {
-    text: "This data is taken from the Traveline National Dataset."
-  },
 
   items: [
   {
@@ -153,13 +151,13 @@ This data is taken from the Traveline National Dataset.-->
     text: "Select all",
     classes: "govuk-button--secondary"
   }) }}
-
+    <form class="form" action="choose-services1" method="post">
   </P>
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 
     </form>
 
-  
+
 
   </div>
 </div>
