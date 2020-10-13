@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <!--
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>-->
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div>
+
+  <h1 class="govuk-heading-xl">Fares Data Build Tool</h1>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div>
+        <h2 class="govuk-heading-s">Create &amp; download fares data</h2>
+
+        <p class="govuk-body">For bus operators running commercial bus services in England, and local authorities that need to create or access NeTEx data for the services they operate.</p><a href="/fareType" class="govuk-link govuk-!-font-size-19" id="faretype-link">Create NeTEx data for your fares</a><br><br><a href="/createdFiles" class="govuk-link govuk-!-font-size-19" id="created-link">Download previously created NeTEx data</a>
+      </div>
+
+      <div class="govuk-!-margin-top-7 govuk-!-padding-bottom-7">
+
+        <h2 class="govuk-heading-s">Operator settings</h2>
+        <p class="govuk-body">For updating the information we use about your services when creating NeTEx data.</p><a href="/account" class="govuk-link govuk-!-font-size-19" id="account-link">My account settings</a>
+
+      </div>
+
+
+
+            <h3 class="govuk-heading-s">Related services</h3>
+
+
+            <p class="govuk-body">Did you end up here by mistake and really need the <a href="https://publish.bus-data.dft.gov.uk/" title="Bus Open Data Service">Bus Open Data Service</a>?
+
+            </p>
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-s">Public information</h2><a href="/contact" class="govuk-link govuk-!-font-size-19" id="contact-link">Contact Us</a>
+  </div>
+</div>
+</div>
+{% endblock %}
