@@ -1,0 +1,725 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="start">< Back</a>
+      </li>
+      <!--
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>-->
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form class="form" action="XXXX" method="post">
+
+      <h1 class="govuk-heading-l">Match stops to fares stages</h1>
+
+
+
+      <p class="govuk-hint" id="">This data has been taken from the Traveline National Dataset and NaPTAN database.</p>
+
+
+      <h1 class="govuk-heading-m">Auto-complete feature</h1>
+      <p class="" id="">
+To assist you with completing this section we have an auto-complete feature.<br />
+Assign the first bus stop in the each fare stage select the auto-complete button and we will fill in the gaps.
+<br />
+You can also match individual stops to fare stages after the auto-complete feature has been used.
+
+      </p>
+
+
+      <table class="govuk-table select-fix">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Stop name</th>
+      <th scope="col" class="govuk-table__header govuk-table__header">NaPTAN code</th>
+      <th scope="col" class="govuk-table__header govuk-table__header">Fare stage</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Lower Ince, nr Warrington Road (on BRYN Street)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTAJ</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+            {
+              value: "select",
+              text: "Select fare stage"
+
+            },
+
+            {
+              value: "Fare1",
+              text: "Fare Stage One",
+              selected: true
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Two"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Three"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Four"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Five"
+            },
+            {
+              value: "notApplicable",
+              text: "Not applicable"
+            }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Ince, nr Ince Station (on INCE GREEN Lane)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTAP</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One",
+            selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, Stop A Pinewood Crescent (on INCE GREEN Lane)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTAW</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One",
+            selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, NW-bound Greenfield Avenue (on Greenfield Avenue)</th>
+      <td class="govuk-table__cell govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+            {
+              value: "select",
+              text: "Select fare stage"
+            },
+
+            {
+              value: "Fare1",
+              text: "Fare Stage One"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Two",
+                selected: true
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Three"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Four"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Five"
+            },
+            {
+              value: "notApplicable",
+              text: "Not applicable"
+            }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, SE-bound The Grove (on The Grove)</th>
+      <td class="govuk-table__cell govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two",
+              selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, NE-bound Canal Street (on Canal Street)</th>
+      <td class="govuk-table__cell govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two",
+              selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, nr Amar Street (on INCE GREEN Lane)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTDG</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two",
+              selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, nr Ince Bar (on MANCHESTER Road)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANPTWAW</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+            {
+              value: "select",
+              text: "Select fare stage"
+            },
+
+            {
+              value: "Fare1",
+              text: "Fare Stage One"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Two"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Three",
+              selected: true
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Four"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Five"
+            },
+            {
+              value: "notApplicable",
+              text: "Not applicable"
+            }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, nr Bird Street (on MANCHESTER Road)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTDP</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three",
+            selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, opp Holt Street (on MANCHESTER Road)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTDTDT	</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three",
+            selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Higher Ince, nr Manchester Road (on BIRKETT BANK)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANPTAJW</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+            {
+              value: "select",
+              text: "Select fare stage"
+
+            },
+
+            {
+              value: "Fare1",
+              text: "Fare Stage One"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Two"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Three"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Four",
+              selected: true
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Five"
+            },
+            {
+              value: "notApplicable",
+              text: "Not applicable"
+            }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Scholes, nr Belvoir Street (on SCHOLEFIELD Lane)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANPTAJT</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four",
+            selected: true
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five"
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wigan, o/s Market Hall (on New Market Street)</th>
+      <td class="govuk-table__cell govuk-table__cell">MANPMTWD</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+            {
+              value: "select",
+              text: "Select fare stage"
+            },
+
+            {
+              value: "Fare1",
+              text: "Fare Stage One"
+
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Two"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Three"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Four"
+            },
+            {
+              value: "Fare1",
+              text: "Fare Stage Five",
+              selected: true
+            },
+            {
+              value: "notApplicable",
+              text: "Not applicable"
+            }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Wigan, Stand S Wigan Bus Station</th>
+      <td class="govuk-table__cell govuk-table__cell">MANTMPGA</td>
+      <td class="govuk-table__cell govuk-table__cell">
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+
+          items: [
+          {
+            value: "select",
+            text: "Select fare stage"
+          },
+
+          {
+            value: "Fare1",
+            text: "Fare Stage One"
+
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Two"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Three"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Four"
+          },
+          {
+            value: "Fare1",
+            text: "Fare Stage Five",
+            selected: true
+          },
+          {
+            value: "notApplicable",
+            text: "Not applicable"
+          }
+
+          ]
+        }) }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="autocomplete">
+  <a href="fare-stop-match-complete" class="govuk-button govuk-button--secondary" >
+  Auto-complete remaining fare stages
+</a>
+</p>
+
+
+<h1 class="govuk-heading-m">Auto-complete feature</h1>
+
+<p class="" id="">
+To assist you with completing this section we have an auto-complete feature.<br />
+Assign the first bus stop in the each fare stage select the auto-complete button and we will fill in the gaps.
+<br />
+You can also match individual stops to fare stages after the auto-complete feature has been used.
+
+</p>
+
+<p class="">
+  <b>Once all fare stages have been assigned you are ready to continue.</b>
+  </p>
+
+  <a href="" class="govuk-button govuk-button" >
+Continue
+</a>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
