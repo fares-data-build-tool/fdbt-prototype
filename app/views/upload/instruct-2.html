@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Getting ready for your fares data upload
+</h1>
+
+<p class="govuk-hint">Here is the information you need</p>
+
+
+<h2 class="govuk-heading-m">Here is your help information on creating and using fares triangles</h2>
+<a class="govuk-!-font-size-19" href="https://tfn-preprod.infinityworks.com/_next/static/files/How-to-Upload-a-Fares-Triangle-173d318a.pdf">Description for fares triangles</a>
+<br />
+<a class="govuk-!-font-size-19" href="">Fares triangle temple for use with the CSV upload</a>
+
+<p>
+  &nbsp;
+  </p>
+<h2 class="govuk-heading-m">Here is your help information for troubleshooting fare triangle potential problems</h2>
+<a class="govuk-!-font-size-19" href="https://tfn-preprod.infinityworks.com/_next/static/files/Fares-Triangle-Example-b5700aab.csv">Fare data triangle help files</a>
+
+
+<p>
+  &nbsp;
+  </p>
+
+    <form class="form" action="type-of-passengers" method="get">
+
+      <button class="govuk-button" data-module="govuk-button">I am ready to upload</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}

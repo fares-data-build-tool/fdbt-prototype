@@ -35,8 +35,8 @@
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "1",
-      name: "1",
+      idPrefix: "what-is",
+      name: "what-is",
       fieldset: {
         legend: {
           text: "Firstly, do you know what a fares date triangle is?",
@@ -52,7 +52,7 @@
 
         },
         {
-          value: "govuk-verify",
+          value: "no",
           text: "No – I do not know and need help"
         }
       ]
@@ -64,8 +64,8 @@
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "2",
-      name: "2",
+      idPrefix: "prepared",
+      name: "prepared",
       fieldset: {
         legend: {
           text: "Secondly, have you prepared your fares data triangle as a CSV?",
@@ -81,7 +81,7 @@
 
         },
         {
-          value: "govuk-verify",
+          value: "no",
           text: "No – I am unsure how to do this"
         }
       ]
@@ -93,11 +93,11 @@
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
         {{ govukRadios({
-          idPrefix: "3",
+          idPrefix: "rightway",
           name: "3",
           fieldset: {
             legend: {
-              text: "Thirdly, Has your fares data triangle been prepared in the right way?",
+              text: "Thirdly, has your fares data triangle been prepared in the right way?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--m"
             }
@@ -106,11 +106,11 @@
           items: [
             {
               value: "yes",
-              text: "Yes - I have read the help files and have upload one before"
+              text: "Yes - I have read the help files and have uploaded one before"
 
             },
             {
-              value: "govuk-verify",
+              value: "no",
               text: "No - I am unsure, I would like to read the help and guidance files"
             }
           ]
@@ -122,12 +122,12 @@
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
           {{ govukCheckboxes({
-            idPrefix: "organisation",
-            name: "organisation",
+            idPrefix: "optout",
+            name: "optout",
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                text: "Do you want to see this page again?",
+                text: "Do you want to skip this page next time?",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--s"
               }

@@ -85,6 +85,33 @@ router.post('/multi-operator/period-type', function (req, res) {
 })
 
 
+//Six outcomes here - answers from 3 questions
+
+// 1 - Yes, No, No = (Fares Triangle Intro)
+// 2 - Yes, Yes, No = (Fares Triangle Intro + Fares Triangle Temple)
+// 3 - Yes, Yes, Yes = (Fares Triangle Intro + Fares Triangle Temple + Fares Triangle Help Files)
+
+// 5 - No, Yes, Yes = (Fares Triangle Temple + Fares Triangle Help Files)
+// 6 - No, No, Yes = (Triangle Help Files)
+// 4 - No, No, No = upload
+
+router.post('/upload/pre-upload', function (req, res) {
+
+    let reroute = req.session.data['multi']
+
+    console.log(req.session.data['multi'])
+
+    //Option 1
+    if (reroute === 'upload') {
+        res.redirect('/multi-operator/upload')
+    }
+    //Option 2
+    else if (reroute === 'specifiy') {
+        res.redirect('/multi-operator/choose-services-own')
+    }
+    //end
+})
+
 
 
 
