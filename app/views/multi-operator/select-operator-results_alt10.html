@@ -342,58 +342,169 @@
 </div>
 -->
 
+<form>
+
+
+<div class="form-loop">
+  <div class="name">
+    <h4 class="govuk-heading-s">Name</h4>
+  </div>
+  <div class="govuk-body noc">
+    <h4 class="govuk-heading-s">NOC code</h4>
+  </div>
+</div>
 
 
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-{{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - South Yorkshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCSY</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - West Yorkshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCWY</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - North Yorkshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCNY</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - East Yorkshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCEY</span>
+  </div>
+</div>
 
 
 
 
-    items: [
-    {
-      value: "xxxxx",
-      text: "Stagecoach - South Yorkshire  - SCSY"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - West Yorkshire  - SCWY"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - North Yorkshire  - SCNY"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - East Yorkshire  - SCEY"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - Lancashire  - SCLS"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - Cheshire  - SCCH"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - Derbyshire  - SCDR"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - Cumbria  - SCCU"
-    },
-    {
-      value: "xxxxx",
-      text: "Stagecoach - Stafford  - SCST"
-    }
 
-    ]
-  }) }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Stagecoach - Cheshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCCH</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Stagecoach - Derbyshire
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCDR</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - Cumbria
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCCU</span>
+  </div>
+</div>
+
+
+
+<div class="form-loop">
+  <div class="name">
+    <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Stagecoach - Stafford
+        </label>
+      </div>
+  </div>
+  <div class="govuk-body noc">
+    <span>SCST</span>
+  </div>
+</div>
+
+
+
+
+
+</form>
+
+
 <P>
         <form class="form" action="search-operator20" method="post">
   {% from "govuk/components/button/macro.njk" import govukButton %}

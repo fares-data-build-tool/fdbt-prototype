@@ -70,3 +70,30 @@ clear: both;
   text-align: right;
   margin-bottom: 0;
 }
+
+
+.form-loop{
+    margin-bottom: 5px;
+  .name{
+    float: left;
+    width: 530px;
+    h4{
+      margin-bottom: 0;
+    }
+  }
+  .noc{
+    float: left;
+    span{
+      display: block;
+      margin-top: 8px;
+    }
+    h4{
+      margin-bottom: 0;
+    }
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
