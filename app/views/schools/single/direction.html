@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l" id="single-direction-page-heading">Select a journey direction</h1>
+<span class="govuk-hint" id="direction-operator-linename-passenger-type-hint">Warrington's Own Buses<!-- --> - <!-- -->1<!-- --> - <!-- -->Adult</span>
+<span class="govuk-hint" id="direction-journey-description-hint">Journey: Warrington - Latchford/Westy (Circ)</span>
+
+    <form class="form" action="input" method="post">
+
+      {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+      {{ govukSelect({
+        id: "sort",
+        name: "sort",
+        label: {
+          text: "Sort by"
+        },
+        items: [
+          {
+            value: "published",
+            text: "Select One",
+            selected: true
+          },
+          {
+            value: "updated",
+            text: "Bus Interchange, Warrington TO Bus Interchange, Warrington"
+          },
+          {
+            value: "views",
+            text: "Bus Interchange, Warrington TO Whitley Avenue, Westy"
+          }
+        ]
+      }) }}
+      <span class="govuk-hint hint-text" id="traveline-main-hint">This data is taken from the Traveline National Dataset (TNDS) and should include all of your registered routes for this service</span>
+      <span class="govuk-hint hint-text" id="traveline-sub-hint">If you have route variations within your fares triangle, you are only required to upload one complete triangle that includes all of the potential stops</span>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

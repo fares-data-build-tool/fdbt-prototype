@@ -1,0 +1,113 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+
+  </ol>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your fare information answers before you continue</h1>
+
+
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You will not be shown these answers again, ensure they are correct
+          </strong>
+        </div>
+
+
+
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Services</th>
+                  <td class="govuk-table__cell"> 787, 743, 3D, 709, 751
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Product: The Name</th>
+                  <td class="govuk-table__cell">Price: £2.00<br />
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+
+
+                <!--
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fare stage – Leeds</th>
+                  <td class="govuk-table__cell">stops – Park Terminus</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fare stage – Manchester</th>
+                  <td class="govuk-table__cell">stops – Newcastle Avenue,<br />Lincoln Avenue </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fare stage – Wakefield</th>
+                  <td class="govuk-table__cell">stops – Belford Avenue,<br />Croasdale Avenue</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">xxx</th>
+                  <td class="govuk-table__cell">xxx</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Change</a></td>
+                </tr>
+                  -->
+            </tbody>
+        </table>
+
+
+
+
+
+
+        <form action="sales-offer" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,102 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+            <h1 class="govuk-heading-l">Add times and dates</h1>
+
+          <span class="govuk-hint" id="service-operator-hint">Add the days and times</span>
+
+
+      </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Sort by
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Select Day</option>
+            <option value="updated" >Bank Holiday</option>
+            <option value="updated" >Monday</option>
+            <option value="updated" >Tuesday</option>
+            <option value="updated" >Wednesday</option>
+            <option value="updated" >Thursday</option>
+            <option value="updated" >Friday</option>
+            <option value="updated" >Saturday</option>
+            <option value="updated" >Sunday</option>
+
+
+          </select>
+        </div>
+  </div>
+    <div class="govuk-grid-column-one-quarter">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-5">
+              Start Time
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+          </div>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-5">
+              Start Time
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="width-5" name="width-5" type="text">
+          </div>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+Add day
+  </button>
+    </div>
+
+
+
+
+        <form action="complete" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+
+
+{% endblock %}

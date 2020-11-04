@@ -1,0 +1,197 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="term-time" method="get">
+      <h1 class="govuk-heading-l">Tell us more about the passenger details</h1>
+
+
+      <span class="govuk-hint" id="">Specify the age range and what proof is needed for the ticket</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- We need to know the age ranges, if you have them -->
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+
+
+{% set child %}
+{{ govukInput({
+  id: "group-ranges-child-min",
+  name: "adult",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+    text: "Minimum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+{{ govukInput({
+  id: "group-ranges-child-max",
+  name: "adult1",
+  inputmode: "numeric",
+  classes: "govuk-input--width-2",
+  label: {
+   text: "Maximum age"
+  },
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+{% endset -%}
+
+
+
+{% set proof %}
+{{ govukCheckboxes({
+  idPrefix: "proof",
+  name: "proof",
+
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "scard",
+      text: "Student card"
+    },
+    {
+      value: "id",
+      text: "Identity document"
+    }
+  ]
+}) }}
+
+{% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "adult-range",
+  name: "adult-range",
+  fieldset: {
+    legend: {
+      text: "Do the school passengers have and age range?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: child
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "child-range",
+  name: "child-range",
+  fieldset: {
+    legend: {
+      text: "Do the school passengers require a proof of age document?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+
+
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: proof
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

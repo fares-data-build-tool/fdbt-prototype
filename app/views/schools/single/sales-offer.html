@@ -1,0 +1,94 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+    <div class="govuk-grid-row">
+       <div class="govuk-grid-column-full">
+          <form action="dating" method="post">
+             <h1 class="govuk-heading-l" id="select-sales-offer-package-page-heading">How are the tickets sold?</h1>
+             <div>
+                <p class="govuk-body">To create NeTEx for your fare it needs to contain the following:</p>
+                <ol class="govuk-list govuk-list--number">
+                   <li>Where a ticket can be bought</li>
+                   <li>What payment method it can be bought with</li>
+                   <li>What format the ticket is provided to the passenger in</li>
+                </ol>
+                <p class="govuk-body">This combination of information is called a <strong>sales offer package</strong>. You can choose from one you have already setup or create a new one for these products.</p>
+             </div>
+             <div class="sop-option">
+                <div class="govuk-form-group undefined">
+                   <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select sales offer packages for Name111</legend>
+                      <div class="">
+                         <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-0" name="Name111" value="{&quot;name&quot;:&quot;Onboard (cash)&quot;,&quot;description&quot;:&quot;Purchasable on board the bus, with cash, as a paper ticket.&quot;,&quot;purchaseLocations&quot;:[&quot;onBoard&quot;],&quot;paymentMethods&quot;:[&quot;cash&quot;],&quot;ticketFormats&quot;:[&quot;paperTicket&quot;]}">
+                              <label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-0">Onboard (cash) - Purchasable on board the bus, with cash, as a paper ticket.</label>
+                            </div>
+
+                            <div class="govuk-checkboxes__item">
+                              <input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-22" name="Name111" value="">
+                              <label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-22">Cheque - XXX.</label>
+                            </div>
+
+                            <div class="govuk-checkboxes__item">
+                              <input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-222" name="Name111" value="">
+                              <label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-222">Postal order - XXX.</label>
+                            </div>
+
+                            <div class="govuk-checkboxes__item">
+                              <input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-2222" name="Name111" value="">
+                              <label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-2222">Direct debit - XXX.</label>
+                            </div>
+
+
+                            <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-1" name="Name111" value="{&quot;name&quot;:&quot;Onboard (contactless)&quot;,&quot;description&quot;:&quot;Purchasable on board the bus, with a contactless card or device, as a paper ticket.&quot;,&quot;purchaseLocations&quot;:[&quot;onBoard&quot;],&quot;paymentMethods&quot;:[&quot;contactlessPaymentCard&quot;],&quot;ticketFormats&quot;:[&quot;paperTicket&quot;]}"><label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-1">Onboard (contactless) - Purchasable on board the bus, with a contactless card or device, as a paper ticket.</label></div>
+                            <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-2" name="Name111" value="{&quot;name&quot;:&quot;Online (smart card)&quot;,&quot;description&quot;:&quot;Purchasable online, with a debit/credit card or direct debit transaction, on a smart card or similar.&quot;,&quot;purchaseLocations&quot;:[&quot;online&quot;],&quot;paymentMethods&quot;:[&quot;directDebit&quot;,&quot;creditCard&quot;,&quot;debitCard&quot;],&quot;ticketFormats&quot;:[&quot;smartCard&quot;]}"><label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-2">Online (smart card) - Purchasable online, with a debit/credit card or direct debit transaction, on a smart card or similar.</label></div>
+                            <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-3" name="Name111" value="{&quot;name&quot;:&quot;Mobile App&quot;,&quot;description&quot;:&quot;Purchasable on a mobile device application, with a debit/credit card or direct debit transaction, stored on the mobile application.&quot;,&quot;purchaseLocations&quot;:[&quot;mobileDevice&quot;],&quot;paymentMethods&quot;:[&quot;debitCard&quot;,&quot;creditCard&quot;,&quot;mobilePhone&quot;,&quot;directDebit&quot;],&quot;ticketFormats&quot;:[&quot;mobileApp&quot;]}"><label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-3">Mobile App - Purchasable on a mobile device application, with a debit/credit card or direct debit transaction, stored on the mobile application.</label></div>
+                            <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-4" name="Name111" value="{&quot;name&quot;:&quot;On bus&quot;,&quot;description&quot;:&quot;Cash on bus&quot;,&quot;purchaseLocations&quot;:[&quot;onBoard&quot;],&quot;paymentMethods&quot;:[&quot;cash&quot;],&quot;ticketFormats&quot;:[&quot;paperTicket&quot;]}"><label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-4">On bus - Cash on bus</label></div>
+                            <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="Name111-checkbox-5" name="Name111" value="{&quot;name&quot;:&quot;Apple Pay&quot;,&quot;description&quot;:&quot;On board payment with apple pay&quot;,&quot;purchaseLocations&quot;:[&quot;onBoard&quot;],&quot;paymentMethods&quot;:[&quot;mobilePhone&quot;],&quot;ticketFormats&quot;:[&quot;paperTicket&quot;]}"><label class="govuk-label govuk-checkboxes__label" for="Name111-checkbox-5">Apple Pay - On board payment with apple pay</label></div>
+                            <input type="hidden" name="Name111">
+                         </div>
+                      </div>
+                   </fieldset>
+                </div>
+             </div>
+
+
+             <a href="sales-add" role="button" draggable="false" class="govuk-button govuk-button--secondary create-new-sop-button" data-module="govuk-button" id="create-new-button">Create New Sales Offer Package</a>
+
+<br />
+ <input type="submit" value="Continue" id="continue-button" class="govuk-button">
+          </form>
+       </div>
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="product-details-page-heading">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+      <h1 class="govuk-fieldset__heading" id="product-details-page-heading">Enter your product details</h1>
+
+    </legend>
+
+    <span class="govuk-hint" id="service-operator-hint">Warrington's Own Buses<!-- --> - <!-- -->Period ticket<!-- --> - <!-- -->School</span>
+
+
+    <div class="govuk-form-group undefined">
+
+        <label class="govuk-label" for="product-details-name">Product name</label>
+        <span class="govuk-hint" id="product-name-hint">Must be between 2 and 50 characters long</span>
+
+        <div class="">
+          <input type="text" class="govuk-input govuk-input--width-30 govuk-product-name-input__inner__input" id="product-details-name" name="productDetailsNameInput" aria-describedby="product-name-hint" maxlength="50" value="">
+        </div>
+  </div>
+
+
+      <div class="govuk-form-group undefined">
+        <label class="govuk-label" for="product-details-price">Product price, in pounds</label>
+        <span class="govuk-hint" id="product-price-hint">For example, 2.99</span>
+
+      <div class="govuk-currency-input"><div class="govuk-currency-input__inner"><span class="govuk-currency-input__inner__unit">£</span><div class=""><input type="text" class="govuk-input govuk-input--width-10 govuk-currency-input__inner__input" name="productDetailsPriceInput" data-non-numeric="true" id="product-details-price" aria-describedby="product-price-hint" value=""></div></div></div>
+
+    </div>
+  </fieldset></div>
+
+    <form class="form" action="gate-check-2" method="post">
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

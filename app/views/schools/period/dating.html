@@ -1,0 +1,137 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="gate-check-3" method="get">
+
+
+
+
+
+
+
+<!-- We need to know the age ranges, if you have them -->
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+
+
+
+
+
+{% set date %}
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "Start date",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  }
+}) }}
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "End date",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  }
+}) }}
+{% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "date",
+  name: "date",
+  fieldset: {
+    legend: {
+      text: "Is there a start or end date for your product(s)?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "If not supplied, your start date will default to today and your end date will default to 100 years from today."
+  },
+
+  items: [
+    {
+      value: "XXXX",
+      text: "Yes",
+      conditional: {
+        html: date
+      }
+    },
+    {
+      value: "xxx ",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}

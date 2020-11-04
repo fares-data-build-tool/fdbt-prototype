@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <form action="sales-offer" method="post">
+               <h1 class="govuk-heading-xl">How are the tickets sold - sales offer package</h1>
+               <span id="service-list-hint" class="govuk-hint">Select all that apply from the lists below</span>
+               <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="sop-purchase-locations">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="sop-purchase-locations">Where can tickets be purchased?</legend>
+                     <div class="">
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-0-on-board" name="purchaseLocations" value="onBoard"><label class="govuk-label govuk-checkboxes__label" for="checkbox-0-on-board">On Board</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-1-online" name="purchaseLocations" value="online"><label class="govuk-label govuk-checkboxes__label" for="checkbox-1-online">Online</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-2-mobile-device" name="purchaseLocations" value="mobileDevice"><label class="govuk-label govuk-checkboxes__label" for="checkbox-2-mobile-device">Mobile Device</label></div>
+                     </div>
+                  </fieldset>
+               </div>
+               <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="sop-payment-methods">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="sop-payment-methods">How can tickets be paid for?</legend>
+                     <div class="">
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-0-cash" name="paymentMethods" value="cash"><label class="govuk-label govuk-checkboxes__label" for="checkbox-0-cash">Cash</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-1-debit-card" name="paymentMethods" value="debitCard"><label class="govuk-label govuk-checkboxes__label" for="checkbox-1-debit-card">Debit Card</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-2-credit-card" name="paymentMethods" value="creditCard"><label class="govuk-label govuk-checkboxes__label" for="checkbox-2-credit-card">Credit Card</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-3-mobile-phone" name="paymentMethods" value="mobilePhone"><label class="govuk-label govuk-checkboxes__label" for="checkbox-3-mobile-phone">Mobile Phone</label></div>
+
+<div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-3-mobile-phone" name="paymentMethods" value="mobilePhone"><label class="govuk-label govuk-checkboxes__label" for="checkbox-3-mobile-phone">Direct Debit</label></div>
+<div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-3-mobile-phone1" name="paymentMethods" value="mobilePhone"><label class="govuk-label govuk-checkboxes__label" for="checkbox-3-mobile-phone1">Cheque</label></div>
+<div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-3-mobile-phone2" name="paymentMethods" value="mobilePhone"><label class="govuk-label govuk-checkboxes__label" for="checkbox-3-mobile-phone2">Postal Order</label></div>
+                     </div>
+                  </fieldset>
+               </div>
+               <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="sop-ticket-formats">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="sop-ticket-formats">What format do the tickets come in?</legend>
+                     <div class="">
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-0-paper-ticket" name="ticketFormats" value="paperTicket"><label class="govuk-label govuk-checkboxes__label" for="checkbox-0-paper-ticket">Paper Ticket</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-1-mobile-app" name="ticketFormats" value="mobileApp"><label class="govuk-label govuk-checkboxes__label" for="checkbox-1-mobile-app">Mobile App</label></div>
+                        <div class="govuk-checkboxes__item"><input type="checkbox" class="govuk-checkboxes__input" id="checkbox-2-smart-card" name="ticketFormats" value="smartCard"><label class="govuk-label govuk-checkboxes__label" for="checkbox-2-smart-card">Smart Card</label></div>
+                     </div>
+                  </fieldset>
+               </div>
+               <input type="submit" value="Continue" id="continue-button" class="govuk-button">
+            </form>
+         </div>
+         <div class="govuk-grid-column-one-third">
+            <h1 class="govuk-heading-s">What is a Sales Offer Package?</h1>
+            <p class="govuk-body">To create NeTEx for your fares, you need to provide the following:</p>
+            <ol class="govuk-body">
+               <li>Where a ticket can be bought</li>
+               <li>What payment methods can be used to buy a ticket</li>
+               <li>In what format a ticket will be used by passengers</li>
+            </ol>
+            <p class="govuk-body">This combination of information is known as a <b>sales offer package</b>.</p>
+         </div>
+      </div>
+
+
+{% endblock %}

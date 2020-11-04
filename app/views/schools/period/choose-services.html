@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <!--  Which service(s) is the ticket valid for?
+      Select all services that apply
+
+This data is taken from the Traveline National Dataset.-->
+
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Select the services the ticket is valid for
+
+    </h1>
+  </legend>
+  <span id="waste-hint" class="govuk-hint">
+     Select all services that apply. This data is taken from the Traveline National Dataset.
+   </span>
+</fieldset>
+
+
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+
+
+
+
+  items: [
+  {
+    value: "xxxxx",
+    text: "787 - Todmorden - West Yorkshire (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "743 - Mytholmroyd - West Yorkshire  (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "3D - Luddendenfoot - West Yorkshire  (Start Date 02/02/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "709 - Sowerby Bridge - West Yorkshire  (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "751 - Ripponden - West Yorkshire  (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "754 - Elland - West Yorkshire  (Start Date 02/03/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "1 - West Vale - West Yorkshire  (Circ) (Start Date 06/07/2020)"
+  },
+  {
+    value: "xxxxx",
+    text: "12 - Hebden Bridge (Circ) - West Yorkshire  (Start Date 06/07/2020)"
+  }
+
+  ]
+}) }}
+<P>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+
+    text: "Select all",
+    classes: "govuk-button--secondary"
+  }) }}
+  </P>
+
+  <form class="form" action="name-price" method="post">
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

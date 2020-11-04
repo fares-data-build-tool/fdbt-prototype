@@ -1,0 +1,106 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+
+  </ol>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your sales information answers before you continue</h1>
+
+
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You will not be shown these answers again, ensure they are correct
+          </strong>
+        </div>
+
+
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Sales offer package	</th>
+                  <td class="govuk-table__cell">Onboard (cash)</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Sales offer package	</th>
+                  <td class="govuk-table__cell">Onboard (contactless)</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Ticket start date</th>
+                  <td class="govuk-table__cell">25 September 2020 (default)</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Ticket end date </th>
+                  <td class="govuk-table__cell">-</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <!--
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">xxx</th>
+                  <td class="govuk-table__cell">xxx</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Change</a></td>
+                </tr>
+                  -->
+            </tbody>
+        </table>
+
+
+                <h2 class="govuk-heading-m">Now submit your data for NetEx creation</h2>
+
+        <p>
+          By submitting this data you are confirming that, to the best of your knowledge, that the details you are providing are correct.
+          </p>
+
+
+
+        <form action="complete" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+
+
+{% endblock %}

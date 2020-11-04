@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check your ticket information answers before you continue</h1>
+
+
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You will not be shown these answers again, ensure they are correct
+          </strong>
+        </div>
+
+
+
+
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fare type</th>
+                  <td class="govuk-table__cell">School ticket</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Passenger information – age range</th>
+                  <td class="govuk-table__cell">Minimum age 5, <br />Maximum age 6</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Passenger information – proof documents</th>
+                  <td class="govuk-table__cell">Membership card,<br />Student card</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Valid in term time</th>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fare type</th>
+                  <td class="govuk-table__cell">Period ticket</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">change</a></td>
+                </tr>
+
+
+                <!--
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">xxx</th>
+                  <td class="govuk-table__cell">xxx</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#" class="govuk-link">Change</a></td>
+                </tr>
+                  -->
+            </tbody>
+        </table>
+
+
+
+
+
+
+        <form action="choose-services" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
