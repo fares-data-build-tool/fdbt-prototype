@@ -1,0 +1,164 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l" id="multiple-product-page-heading">Enter your product details</h1>
+        <span class="govuk-hint" id="service-operator-hint">Warrington's Own Buses<!-- --> - <!-- -->3<!-- --> Products - <!-- -->Adult</span>
+        <div class="govuk-inset-text">For example, Super Saver ticket - 4.95 - 2</div>
+      </div>
+  </div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+          <div class="govuk-form-group undefined"><label class="govuk-label" for="multiple-product-name-0">
+            <span class="govuk-visually-hidden">Name</span>
+            <span aria-hidden="true">Name - Product 1</span>
+            </label>
+            <span class="govuk-hint" id="product-name-hint-0">Must be between 2 and 50 characters long</span>
+            <div class="">
+                <input type="text" class="govuk-product-name-input__inner__input govuk-input govuk-!-width-full" id="multiple-product-name-0" name="multipleProductNameInput0" aria-describedby="product-name-hint-0" maxlength="50" value="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group undefined">
+                   <label class="govuk-label" for="multiple-product-price-0"><span class="govuk-visually-hidden">Price</span><span aria-hidden="true">Price</span></label><span class="govuk-hint" id="product-price-hint-0">Example, 2.99</span>
+                   <div class="govuk-currency-input">
+                      <div class="govuk-currency-input__inner">
+                         <span class="govuk-currency-input__inner__unit">£</span>
+                         <div class=""><input type="text" class="govuk-input govuk-input--width-10 govuk-currency-input__inner__input" name="multipleProductPriceInput0" data-non-numeric="true" aria-describedby="product-price-hint-0" id="multiple-product-price-0" value=""></div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group undefined">
+                  <label class="govuk-label" for="multiple-product-duration-0">
+                    <span class="govuk-visually-hidden">Amount</span>
+                    <span aria-hidden="true">Amount</span>
+                  </label><span class="govuk-hint" id="product-duration-hint-0">Whole number</span>
+                  <div class="">
+                    <input type="text" class="govuk-input govuk-input--width-20 govuk-product-name-input__inner__input" id="multiple-product-duration-0" name="multipleProductDurationInput0" aria-describedby="product-duration-hint-0" maxlength="366" value="">
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Duration
+                  </label>
+                  <span class="govuk-hint" id="sort">Type</span>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="published">Hours</option>
+                    <option value="updated" selected>Days</option>
+                    <option value="views">Weeks</option>
+                    <option value="comments">Years</option>
+                  </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+          <div class="govuk-form-group undefined"><label class="govuk-label" for="multiple-product-name-0">
+            <span class="govuk-visually-hidden">Name</span>
+            <span aria-hidden="true">Name - Product 2</span>
+            </label>
+            <span class="govuk-hint" id="product-name-hint-0">Must be between 2 and 50 characters long</span>
+            <div class="">
+                <input type="text" class="govuk-product-name-input__inner__input govuk-input govuk-!-width-full" id="multiple-product-name-0" name="multipleProductNameInput0" aria-describedby="product-name-hint-0" maxlength="50" value="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group undefined">
+                   <label class="govuk-label" for="multiple-product-price-0"><span class="govuk-visually-hidden">Price</span><span aria-hidden="true">Price</span></label><span class="govuk-hint" id="product-price-hint-0">Example, 2.99</span>
+                   <div class="govuk-currency-input">
+                      <div class="govuk-currency-input__inner">
+                         <span class="govuk-currency-input__inner__unit">£</span>
+                         <div class=""><input type="text" class="govuk-input govuk-input--width-10 govuk-currency-input__inner__input" name="multipleProductPriceInput0" data-non-numeric="true" aria-describedby="product-price-hint-0" id="multiple-product-price-0" value=""></div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group undefined">
+                  <label class="govuk-label" for="multiple-product-duration-0">
+                    <span class="govuk-visually-hidden">Amount</span>
+                    <span aria-hidden="true">Amount</span>
+                  </label><span class="govuk-hint" id="product-duration-hint-0">Whole number</span>
+                  <div class="">
+                    <input type="text" class="govuk-input govuk-input--width-20 govuk-product-name-input__inner__input" id="multiple-product-duration-0" name="multipleProductDurationInput0" aria-describedby="product-duration-hint-0" maxlength="366" value="">
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Duration
+                  </label>
+                  <span class="govuk-hint" id="sort">Type</span>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="published">Hours</option>
+                    <option value="updated" selected>Days</option>
+                    <option value="views">Weeks</option>
+                    <option value="comments">Years</option>
+                  </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
