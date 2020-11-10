@@ -73,15 +73,15 @@ workflows:
             branches:
               only: move-to-aws
 
-      # - aws-ecs/deploy-service-update:
-      #     requires:
-      #       - aws-ecr/build-and-push-image
-      #     family: "${PROTOTYPE_ECS_FAMILY}"
-      #     name: deploy-prototype
-      #     cluster-name: "${SITE_ECS_CLUSTER}"
-      #     container-image-name-updates: "container=${PROTOTYPE_ECS_FAMILY},tag=${CIRCLE_SHA1}"
-      #     context: tfn-fdbt-preprod
-      #     verify-revision-is-deployed: true
-      #     filters:
-      #       branches:
-      #         only: master
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image
+          family: "${PROTOTYPE_ECS_FAMILY}"
+          name: deploy-prototype
+          cluster-name: "${SITE_ECS_CLUSTER}"
+          container-image-name-updates: "container=${PROTOTYPE_ECS_FAMILY},tag=${CIRCLE_SHA1}"
+          context: tfn-fdbt-test
+          verify-revision-is-deployed: true
+          filters:
+            branches:
+              only: move-to-aws
