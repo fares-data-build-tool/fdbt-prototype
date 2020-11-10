@@ -47,21 +47,21 @@ workflows:
       - checkout-repo:
           filters:
             branches:
-              only: move-to-aws
+              only: master
 
       - audit-prototype:
           requires:
             - checkout-repo
           filters:
             branches:
-              only: move-to-aws
+              only: master
 
       - test-prototype:
           requires:
             - audit-prototype
           filters:
             branches:
-              only: move-to-aws
+              only: master
 
       - aws-ecr/build-and-push-image:
           requires:
@@ -71,7 +71,7 @@ workflows:
           context: tfn-fdbt-core
           filters:
             branches:
-              only: move-to-aws
+              only: master
 
       - aws-ecs/deploy-service-update:
           requires:
@@ -84,4 +84,4 @@ workflows:
           verify-revision-is-deployed: true
           filters:
             branches:
-              only: move-to-aws
+              only: master
